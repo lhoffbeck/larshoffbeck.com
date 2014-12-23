@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+  <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+      <title>Lars Hoffbeck</title>
+
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link href='http://fonts.googleapis.com/css?family=Quicksand:300' rel='stylesheet' type='text/css'>
+
+      <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <style type="text/css">
+
+    @font-face {
+	  font-family: 'Not Courier Sans';
+	  src: url('./fonts/NotCourierSans.otf');
+	}
+
+      nav{
+        display: none;
+      }
+
+      #main{
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 300;
+        font-size: 35px;
+        display: none;
+    }
+
+    </style>
+
+    <script>
+    	var prev;
+      	(function($){
+       		$(window).load(function(){
+          		$("#main").fadeIn(800);
+          		$("#navigation").fadeIn(1600);
+
+          		prev = 'home';
+          		load(prev, prev);
+
+          		$("nav a").click(function(event) {
+          			if(prev != event.target.id){
+			        	load(event.target.id, prev);
+			        	prev = event.target.id;
+          			}
+			    });
+        	});
+      })(jQuery);
+
+		function load(currrent, previous){
+			$.get( './sub/' + currrent + '.html', function(response) {
+	          	$("#content").hide().html(response).fadeIn(600);
+	          	$('#' + previous).removeClass('current');
+	          	$('#' + currrent).addClass('current');
+	        });
+		}
+    </script>
+
+  </head>
+  <body>
+
+    <section style="margin:50px;">
+        <div id="main" class="centered">
+          <div id="content"></div>
+        </div>
+    </section>
+
+  <nav class="main nav" id="navigation">
+    <ul>
+      <li><a id="home">Home</a></li>
+      <li><a id="about">About</a></li>
+      <li><a id="skills">Skills</a></li>
+      <li><a id="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+	<div id="preload">
+	   <img src="./images/tree_bark.png" width="1" height="1" alt="background" />
+	</div>
+
+  </body>
+</html>

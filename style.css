@@ -1,0 +1,118 @@
+    html{
+      background-image:url(images/tree_bark.png); 
+      background-repeat:repeat;
+      width:100%;
+      overflow: hidden;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .section{
+      width: 750px;
+    }
+
+    .info{
+      font-size: 25px;
+      margin: 0px 0px 18px 30px;
+    }
+
+    .home{
+      font-size: 3.0em;
+      font-weight: 300;
+      font-size: 35px;
+      width:750px;
+      text-align:center;
+      font-family: 'Not Courier Sans','Quicksand', sans-serif;
+    }
+
+    .title{
+      font-weight: bold;
+      font-size: 45px;
+    }
+
+    div#preload { display: none; }
+
+    .canttouchthis{
+
+      cursor: default;
+
+      -webkit-user-select: none; 
+      -moz-user-select: none;
+      -ms-user-select: none;
+
+      -o-user-select: none;
+      user-select: none;
+    }
+
+    .nav a{
+      list-style-type: none;
+      text-align: center;
+      padding:0; margin:0;
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 1.5em;
+    }
+
+    a:hover {
+      color:#47B247;
+    }
+
+    a{
+      color: black;
+    }
+
+    a, a:visited, a:hover, a:active {
+      text-decoration: none;
+    }
+
+    .current{
+      color:#47B247;
+    }
+
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    nav.main {
+      height: 100px;
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      left: 0px;
+      z-index: 999;
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
+    }
+
+    nav.main ul {
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+      zoom: 1;
+      display: block;
+      text-align: center;
+      padding: 0px 0px 0px 0px;
+    }
+
+    nav.main li {
+       display:inline-block;
+       *display:inline;
+       *zoom:1;
+       margin-right: 20px;
+      padding-bottom: 0px;
+    }
+
+    nav.main a {
+      display: block;
+      text-transform: uppercase;
+      padding-top: 28px;
+      padding-bottom: 0px;
+       -o-transition:.5s;
+       -ms-transition:.5s;
+       -moz-transition:.5s;
+       -webkit-transition:.5s;
+    }
+
